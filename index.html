@@ -145,6 +145,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/26/%E9%85%8D%E7%BD%AEPicgo%E5%9B%BE%E5%BA%8A%E4%B9%8BCOS%E3%80%81OSS%E3%80%81Github%E5%9B%BE%E5%BA%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/26/%E9%85%8D%E7%BD%AEPicgo%E5%9B%BE%E5%BA%8A%E4%B9%8BCOS%E3%80%81OSS%E3%80%81Github%E5%9B%BE%E5%BA%8A/" class="post-title-link" itemprop="url">配置Picgo图床之COS、OSS、Github图床</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-02-26 15:42:20" itemprop="dateCreated datePublished" datetime="2024-02-26T15:42:20+08:00">2024-02-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>PicGo是一款开源的图片上传和管理工具，它提供了简单易用的界面和丰富的功能，方便用户上传、管理和分享图片。</p>
+<p>以下是PicGo的一些主要特点和功能：</p>
+<ol>
+<li><p>图片上传：PicGo支持将本地图片快速上传到云存储服务，如七牛云、腾讯云、阿里云等。你可以选择自己喜欢的云存储服务，并通过PicGo将图片批量上传到云端。</p>
+</li>
+<li><p>图片压缩：PicGo内置了图片压缩功能，可以帮助你在上传图片之前对图片进行压缩，减小图片文件大小，提高网页加载速度。</p>
+</li>
+<li><p>图片编辑：PicGo提供了简单的图片编辑功能，包括裁剪、旋转、调整亮度、对比度等。你可以在上传图片之前对图片进行一些基本的编辑操作。</p>
+</li>
+<li><p>图片管理：PicGo可以帮助你管理上传的图片，包括查看上传记录、复制图片链接、删除图片等。你可以方便地管理自己上传的图片，并在需要时获取图片链接进行分享。</p>
+</li>
+<li><p>自定义配置：PicGo支持自定义配置，你可以根据自己的需求设置上传的命名规则、存储路径、图片样式等。这样可以更好地满足个性化的需求。</p>
+</li>
+</ol>
+<p>总的来说，PicGo是一款功能强大且易于使用的图片上传和管理工具，适用于个人用户、开发者和博主等多种场景。它可以帮助你更高效地上传、管理和分享图片。</p>
+<h2 id="准备PicGo"><a href="#准备PicGo" class="headerlink" title="准备PicGo"></a>准备PicGo</h2><p>官网下载地址：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/picgo/releases">https://github.com/Molunerfinn/picgo/releases</a></p>
+<p>关注【程序员朱永胜】回复【1012】获取安装包，免费高速下载</p>
+<h2 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h2><h2 id="获取Token"><a href="#获取Token" class="headerlink" title="获取Token"></a>获取Token</h2><p><img src="https://i0.hdslb.com/bfs/article/2f8eacb86cc15e0d23d61807d4b7ef22c7aa5712.png@1256w_858h_!web-article-pic.avif" alt="image-20230807200430847"></p>
+<p><img src="https://i0.hdslb.com/bfs/article/e81520ed34f7e847f13f57d9b3dd5a873d9243a9.png@1256w_856h_!web-article-pic.avif"></p>
+<p><img src="https://i0.hdslb.com/bfs/article/5facf97bf1a7c36cee2de1c9d78dfc4692a752c7.png@1256w_856h_!web-article-pic.avif"></p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>随便创建一个仓库即可，我创建的是<code>pic</code>仓库</p>
+<p><img src="https://i0.hdslb.com/bfs/article/16a843060c91d05d76ad291b97532358f7233d42.png@1256w_856h_!web-article-pic.avif" alt="image-20230807200705649"></p>
+<h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p><img src="https://i0.hdslb.com/bfs/article/a88cc49f29c5a96c8f8fae1666f3577138cbb70d.png@1256w_710h_!web-article-pic.avif"></p>
+<h2 id="配置腾讯云COS"><a href="#配置腾讯云COS" class="headerlink" title="配置腾讯云COS"></a>配置腾讯云COS</h2><h2 id="获取Token-1"><a href="#获取Token-1" class="headerlink" title="获取Token"></a>获取Token</h2><p><img src="https://i0.hdslb.com/bfs/article/c794230b3c2c38dba20c3961babd66fb81c614f4.png@1256w_856h_!web-article-pic.avif" alt="image-20230807200848497"></p>
+<p><img src="https://i0.hdslb.com/bfs/article/f1569e9ab7bf3f95862edcd15ce6fe384124830e.png@1256w_856h_!web-article-pic.avif" alt="image-20230807200924438"></p>
+<h2 id="创建存储桶"><a href="#创建存储桶" class="headerlink" title="创建存储桶"></a>创建存储桶</h2><p><img src="https://i0.hdslb.com/bfs/article/687d45800a4a8c7ed3cc435ee605be7846b85389.png@1256w_856h_!web-article-pic.avif"></p>
+<p>设置为公有读私有写</p>
+<p><img src="https://i0.hdslb.com/bfs/article/4eb67da9130499723a5ecaef1938f323c835a22e.png@1256w_856h_!web-article-pic.avif" alt="image-20230807201130106"></p>
+<p>参考下面模版填写</p>
+<p><img src="https://i0.hdslb.com/bfs/article/cb5573c51aec8f2aa885f3b3b1b0aac3028a21c9.png@1256w_710h_!web-article-pic.avif" alt="image-20230807201157858"></p>
+<h2 id="设置阿里云OSS"><a href="#设置阿里云OSS" class="headerlink" title="设置阿里云OSS"></a>设置阿里云OSS</h2><h2 id="获取密钥"><a href="#获取密钥" class="headerlink" title="获取密钥"></a>获取密钥</h2><p><img src="https://i0.hdslb.com/bfs/article/eb468f1f7755ca79d362946e5fe22132dc346ca4.png@1256w_856h_!web-article-pic.avif" alt="image-20230807201312297"></p>
+<p><img src="https://i0.hdslb.com/bfs/article/dcda02578853f48cc327ef356430cb81553b643e.png@1256w_856h_!web-article-pic.avif" alt="image-20230807201333924"></p>
+<h2 id="创建Bucket"><a href="#创建Bucket" class="headerlink" title="创建Bucket"></a>创建Bucket</h2><p><img src="https://i0.hdslb.com/bfs/article/3ba19487dafabec13a08620a2788e646a5fda125.png@1256w_856h_!web-article-pic.avif" alt="image-20230807201403715"></p>
+<h2 id="参考下面模版"><a href="#参考下面模版" class="headerlink" title="参考下面模版"></a>参考下面模版</h2><p><img src="https://i0.hdslb.com/bfs/article/01470e313c2096326f6254cae4117f417559b7a8.png@1256w_710h_!web-article-pic.avif" alt="image-20230807201422903"></p>
+<p><img src="https://i0.hdslb.com/bfs/article/2149a45155a8a70f422fe0318a8dccb1d3bff68d.png@1256w_856h_!web-article-pic.avif" alt="image-20230807201500562"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/26/Typora%E4%B8%AD%E6%96%87%E5%85%8D%E8%B4%B9%E7%89%88%E4%B8%8B%E8%BD%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -562,7 +654,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
