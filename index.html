@@ -1,677 +1,611 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<html lang="zh-CN" color-mode=light>
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Skyboy">
-  <meta name="keywords" content="">
-  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="我的天空">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="我的天空">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Skyboy">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我的天空</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+  <meta name="author" content="Skyboy">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
   
 
+  
+<link rel="stylesheet" href="/css/style.css">
 
 
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_r673sha78lq.css">
 
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+  
 
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: true,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '[object Object]'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
 
   
+
+  
+
 <meta name="generator" content="Hexo 7.1.1"></head>
 
-
-<body>
+<body class="lock-screen">
+  <div class="loading"></div>
   
-
-  <header>
     
 
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>我的天空</strong>
-    </a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="欢迎光临我的个人博客"></span>
-          
-        </div>
-
-        
-      </div>
-
+  <nav class="navbar">
+    <div class="left">
       
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
       
     </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
+    <div class="center"> </div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
+      <div id="qrcode-navbar"></div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/02/OpenWrt%E5%9B%BA%E4%BB%B6%E6%8E%A8%E8%8D%90%E4%BB%A5%E5%8F%8A%E5%82%BB%E7%93%9C%E5%BC%8F%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/" target="_self">
-          OpenWrt固件推荐以及傻瓜式在线编译
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/02/OpenWrt%E5%9B%BA%E4%BB%B6%E6%8E%A8%E8%8D%90%E4%BB%A5%E5%8F%8A%E5%82%BB%E7%93%9C%E5%BC%8F%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/" target="_self">
-        <div>
-          OpenWrt固件，肯定自己编译的好，但是我懒也不会啊。。。推荐几个自己常关注的，不定时更新。 -1：lean：https://github.com/coolsnowwolf/lede大雕就不介绍了，仓库有x64固件和最近折腾的rk3568固件（r5s、r68k、r68s、h68k等小机机） 0、iStoreOS：https://fw.koolcenter.com/iStoreOS/ 1、骷髅头：
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-02 14:44" pubdate>
-              2024-04-02
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/28/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%20OpenWrt%20%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
-          进阶教程之 OpenWrt 常用网络配置指南
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/28/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%20OpenWrt%20%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
-        <div>
-          当你学会了如何使用 OpenWrt 实现最基础的上网功能，那么是时候更进一步了，接下来学习使用 OpenWrt 实现常用的其它网络配置，比如强化无线网络安全等，以便更好的应对日常使用场景。 修改路由器 LAN 口地址（改变网段）打开“网络”-“接口”，进入 LAN 口配置界面，在“常规设置”选项卡，将“IPv4 地址” 改为需要的IP即可。 LAN 口地址是路由器自身作为一个上网设备所使用的 IP
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-28 09:10" pubdate>
-              2024-03-28
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/28/OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
-          OpenWrt 进阶教程之无线中继配置指南
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/28/OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
-        <div>
-          无线网络传输距离是有限的，一个无线信号无法覆盖到较远的地方，或者远处的信号太弱，你希望能把信号增强并延伸过去。添加一台无线路由器，放在信号中间强度位置，通过无线信号连接上一个路由，那么这就称之为无线中继。 无线相关基础概念入门 无线路由器&#x2F;无线网关: 指的是能发射无线信号的路由器设备，且此设备属于“网关”身份，局域网的所有发往外部网络的数据都要经过此设备处理。  无线 AP: 指的是能发
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-28 07:37" pubdate>
-              2024-03-28
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/13/%E7%94%9F%E9%95%BF%E4%B8%BA%E5%8F%82%E5%A4%A9%E5%A4%A7%E6%A0%91%E7%9A%84%E6%B2%AA%E6%B7%B1300ETF%E5%98%89%E5%AE%9E%E4%B8%AD%E8%AF%81%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E6%B2%AA%E6%B7%B1300etf/" target="_self">
-          时代记录者：生长为“参天大树”的沪深300ETF嘉实中证公募基金沪深300ETF
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/13/%E7%94%9F%E9%95%BF%E4%B8%BA%E5%8F%82%E5%A4%A9%E5%A4%A7%E6%A0%91%E7%9A%84%E6%B2%AA%E6%B7%B1300ETF%E5%98%89%E5%AE%9E%E4%B8%AD%E8%AF%81%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E6%B2%AA%E6%B7%B1300etf/" target="_self">
-        <div>
-          2005年4月8日，沪深300指数以984.67点开盘，一路震荡上扬后收于1003.45点。这也是A股核心资产代表沪深300指数的第一次正式亮相。 7年后，2012年5月7日，国内第二只跨市场指数产品——嘉实沪深300 ETF（159919）正式成立。此后12年时间里，嘉实沪深300ETF见证了国内经济由高速发展转向高质量发展的历程，也成长为A股市场上少有的“千亿级”宽基ETF，也是深交所第一只单
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-13 08:57" pubdate>
-              2024-03-13
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/13/%E9%99%A9%E8%B5%84%E5%A4%A7%E6%89%8B%E7%AC%94%E5%85%A5%E5%B1%80%E9%A6%96%E6%89%B9%E4%B8%AD%E8%AF%81A50ETF%E8%BF%8E%E5%BC%80%E9%97%A8%E7%BA%A2/" target="_self">
-          险资大手笔入局，首批中证A50ETF迎开门红
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/13/%E9%99%A9%E8%B5%84%E5%A4%A7%E6%89%8B%E7%AC%94%E5%85%A5%E5%B1%80%E9%A6%96%E6%89%B9%E4%B8%AD%E8%AF%81A50ETF%E8%BF%8E%E5%BC%80%E9%97%A8%E7%BA%A2/" target="_self">
-        <div>
-          3月12日，首批中证A50ETF正式亮相。摩根中证A50ETF、平安中证A50ETF，分别在上交所、深交所上市交易。 开盘后两只ETF表现活跃，截至午间收盘，摩根中证A50ETF、平安中证A50ETF成交额均超过7亿元。午后，资金继续流入，截至收盘，两只ETF成交额更是双双突破9亿元大关，且单日换手率均超过40%。 上交所表示，中证A50产品的推出将有助于引导资金更多地投向A股核心资产，发挥资产配
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-13 08:51" pubdate>
-              2024-03-13
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/07/%E5%90%B4%E6%B8%85%E4%BA%AE%E7%9B%B8/" target="_self">
-          吴清亮相！五千余字发言金句频出，四大券商火线解读，A股有望延续反弹
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/07/%E5%90%B4%E6%B8%85%E4%BA%AE%E7%9B%B8/" target="_self">
-        <div>
-          3月6日，十四届全国人大二次会议于下午3时举行记者会。刚上任的证监会主席吴清在记者会上，五千余字发言金句频出，引发了资本市场各方高度关注。 吴清非常谦虚，他表示，到证监会主席岗位没有满月，还差一天，边学边干，以学为主，一方面是进一步学习领会党中央国务院关于资本市场工作的决策部署；一方面是通过调研向市场学习。 根据《每日经济新闻》梳理，吴清的讲话涉及投融资平衡、退市制度、提高上市公司质量等与投资者利
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-07 15:36" pubdate>
-              2024-03-07
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/05/%E8%BF%913500%E4%BA%BF%E5%85%83%E5%AE%BD%E5%9F%BAETF%E6%8C%81%E7%BB%AD%E5%90%B8%E9%87%914%E5%8F%AA%E6%B2%AA%E6%B7%B1300ETF%E8%B7%BB%E8%BA%AB%E5%8D%83%E4%BA%BF%E4%BF%B1%E4%B9%90%E9%83%A8/" target="_self">
-          近3500亿元！宽基ETF持续吸金，4只沪深300ETF跻身千亿俱乐部
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/05/%E8%BF%913500%E4%BA%BF%E5%85%83%E5%AE%BD%E5%9F%BAETF%E6%8C%81%E7%BB%AD%E5%90%B8%E9%87%914%E5%8F%AA%E6%B2%AA%E6%B7%B1300ETF%E8%B7%BB%E8%BA%AB%E5%8D%83%E4%BA%BF%E4%BF%B1%E4%B9%90%E9%83%A8/" target="_self">
-        <div>
-          2024年前两个月，宽基股票ETF资金净流入近3500亿元。 2024年以来，资金持续借道指数基金入市，指数化投资动能强劲。宽基指数产品表征市场整体行情，已成为各类投资者配置A股的有力工具，以沪深300、上证50指数为代表的A股核心指数持续吸引大量资金入市。 数据显示，2024年前两个月全市场宽基股票ETF年内份额已增长超1500亿份，资金净流入近3500亿元，其中沪市宽基ETF吸引资金净流入超2
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-05 15:40" pubdate>
-              2024-03-05
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/05/%E5%9B%BD%E5%AE%B6%E5%A4%A7%E5%9F%BA%E9%87%91%E5%87%BA%E6%89%8B%E4%B9%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E8%82%A1/" target="_self">
-          国家大基金出手买了这些股！AI “超级牛股”将在这个细分领域产生?
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/05/%E5%9B%BD%E5%AE%B6%E5%A4%A7%E5%9F%BA%E9%87%91%E5%87%BA%E6%89%8B%E4%B9%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E8%82%A1/" target="_self">
-        <div>
-          近期，市场围绕AI（人工智能）的关注热度还在延续，且投资的细分主线仍在进一步扩散，如AI芯片、算力、服务器、光模块等。与此同时，重点投资芯片产业链的“国家队”国家大基金也频繁现身，且所布局标的多涉及AI概念股。与此同时，上市公司也在不断加码AI产业链，而受益于对AI标的的重点布局，一些主题基金的净值也开始大幅“回血”…… 国家大基金现身持仓多只芯片股 多与AI有关 近来，A股中的AI板块受到资金密
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-05 14:56" pubdate>
-              2024-03-05
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/04/%E5%88%9B%E5%8E%86%E5%8F%B2%E6%96%B0%E9%AB%98/" target="_self">
-          创历史新高，A股万亿油气巨头涨近7%！沙特、俄罗斯、阿联酋等官宣大消息
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/04/%E5%88%9B%E5%8E%86%E5%8F%B2%E6%96%B0%E9%AB%98/" target="_self">
-        <div>
-          3月4日上午，石油板块震荡走强，中国海油涨近7%，股价再创历史新高，中国石油、中曼石油、广汇能源等跟涨。  在经济增长预期较弱、资本市场“资产荒”现象加剧的背景下，中国海油作为A股稀缺的高成长性、高股息股票，其投资性价比凸显。2023年12月以来，公司股价大幅走高后高位波动。表现远好于上证综指及国际油价。截至今天上午收盘，中国海油市值达1.28万亿元，创A股上市以来新高。 沙特、俄罗斯等先后官宣
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-04 15:21" pubdate>
-              2024-03-04
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/02/27/%E7%81%B5%E5%9D%87%E6%8A%95%E8%B5%84%E8%A2%AB%E7%BD%9A%E8%83%8C%E5%90%8E%E9%87%8F%E5%8C%96%E4%BA%A7%E5%93%81%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B%E5%A4%A7%E6%92%A4%E9%80%80%E7%A7%81%E5%8B%9F%E8%B8%A9%E8%B8%8F%E6%80%A7%E8%BD%AC%E6%8D%A2%E8%82%A1%E7%A5%A8/" target="_self">
-          灵均投资被罚背后：量化产品史无前例大撤退，私募踩踏性转换股票
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/27/%E7%81%B5%E5%9D%87%E6%8A%95%E8%B5%84%E8%A2%AB%E7%BD%9A%E8%83%8C%E5%90%8E%E9%87%8F%E5%8C%96%E4%BA%A7%E5%93%81%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B%E5%A4%A7%E6%92%A4%E9%80%80%E7%A7%81%E5%8B%9F%E8%B8%A9%E8%B8%8F%E6%80%A7%E8%BD%AC%E6%8D%A2%E8%82%A1%E7%A5%A8/" target="_self">
-        <div>
-          每经记者：李娜 王海慜 杨建 每经编辑：易启江 在市场日前遭遇一系列风暴后，量化私募成了这轮风暴中最后倒下的一块多米诺骨牌。 2024年开年以来，大量量化产品的净值经历了一轮断崖式下滑，量化私募集体上演超额大回撤，回撤幅度是五年来甚至十年来的极值。 在这个过程中，一个名为灵均投资的量化机构成为了众矢之的，因为它在2月19日开盘后短时间内大量卖出沪深股票，引发了A股的大幅跳水，被交易所给予限制交易和
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-02-27 15:50" pubdate>
-              2024-02-27
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
   </nav>
 
+  
+  
 
-
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline active"> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  
+    <div class="preview">
+  <!-- <nav class="navbar j-navbar-menu">
+    <i class="iconfont iconmenu"></i>
+  </nav> -->
+  <div class="preview-image">
+    
+        
+              <div class="preview-overlay">
+                <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                  <defs>
+                    <path id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                  </defs>
+                  <g class="preview-parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb),0.7"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb),0.5)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb),0.3)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-background)"></use>
+                  </g>
+                </svg>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              
+  </div>
+  <div class="preview-motto-wrapper">
+    <h2 class="preview-motto" id="motto">
+      
+    </h2>
+    
+      <span class="preview-cursor">_</span>
+      
+  </div>
+  <div class="preview-scroll">
+    <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
+  </div>
+</div>
+  
+  <div class="container" id="container">
+    <section class="row post">
+  
     
 
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
     
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+    <a href="/2024/04/02/OpenWrt%E5%9B%BA%E4%BB%B6%E6%8E%A8%E8%8D%90%E4%BB%A5%E5%8F%8A%E5%82%BB%E7%93%9C%E5%BC%8F%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/04/02/OpenWrt%E5%9B%BA%E4%BB%B6%E6%8E%A8%E8%8D%90%E4%BB%A5%E5%8F%8A%E5%82%BB%E7%93%9C%E5%BC%8F%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/" title="OpenWrt固件推荐以及傻瓜式在线编译" >OpenWrt固件推荐以及傻瓜式在线编译</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">OpenWrt固件，肯定自己编译的好，但是我懒也不会啊。。。推荐几个自己常关注的，不定时更新。
+-1：lean：https://github.com/coolsnowwolf/lede大雕就不介...</p>
         </div>
-        <div class="list-group" id="local-search-result"></div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>四月 02, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1154</span>
       </div>
     </div>
   </div>
 </div>
 
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
   
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/28/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%20OpenWrt%20%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/28/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%20OpenWrt%20%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" title="进阶教程之 OpenWrt 常用网络配置指南" >进阶教程之 OpenWrt 常用网络配置指南</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">当你学会了如何使用 OpenWrt 实现最基础的上网功能，那么是时候更进一步了，接下来学习使用 OpenWrt 实现常用的其它网络配置，比如强化无线网络安全等，以便更好的应对日常使用场景。
+修改...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 28, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>2563</span>
+      </div>
     </div>
-  
-  
-  
-  
+  </div>
 </div>
 
-  </footer>
-
-  <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+    
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/28/OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/28/OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" title="OpenWrt 进阶教程之无线中继配置指南" >OpenWrt 进阶教程之无线中继配置指南</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">无线网络传输距离是有限的，一个无线信号无法覆盖到较远的地方，或者远处的信号太弱，你希望能把信号增强并延伸过去。添加一台无线路由器，放在信号中间强度位置，通过无线信号连接上一个路由，那么这就称之为...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 28, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>4679</span>
+      </div>
+    </div>
+  </div>
+</div>
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/13/%E7%94%9F%E9%95%BF%E4%B8%BA%E5%8F%82%E5%A4%A9%E5%A4%A7%E6%A0%91%E7%9A%84%E6%B2%AA%E6%B7%B1300ETF%E5%98%89%E5%AE%9E%E4%B8%AD%E8%AF%81%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E6%B2%AA%E6%B7%B1300etf/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/13/%E7%94%9F%E9%95%BF%E4%B8%BA%E5%8F%82%E5%A4%A9%E5%A4%A7%E6%A0%91%E7%9A%84%E6%B2%AA%E6%B7%B1300ETF%E5%98%89%E5%AE%9E%E4%B8%AD%E8%AF%81%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E6%B2%AA%E6%B7%B1300etf/" title="时代记录者：生长为“参天大树”的沪深300ETF嘉实中证公募基金沪深300ETF" >时代记录者：生长为“参天大树”的沪深300ETF嘉实中证公募基金沪深300ETF</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">2005年4月8日，沪深300指数以984.67点开盘，一路震荡上扬后收于1003.45点。这也是A股核心资产代表沪深300指数的第一次正式亮相。
+7年后，2012年5月7日，国内第二只跨市场指...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 13, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>3836</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/13/%E9%99%A9%E8%B5%84%E5%A4%A7%E6%89%8B%E7%AC%94%E5%85%A5%E5%B1%80%E9%A6%96%E6%89%B9%E4%B8%AD%E8%AF%81A50ETF%E8%BF%8E%E5%BC%80%E9%97%A8%E7%BA%A2/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/13/%E9%99%A9%E8%B5%84%E5%A4%A7%E6%89%8B%E7%AC%94%E5%85%A5%E5%B1%80%E9%A6%96%E6%89%B9%E4%B8%AD%E8%AF%81A50ETF%E8%BF%8E%E5%BC%80%E9%97%A8%E7%BA%A2/" title="险资大手笔入局，首批中证A50ETF迎开门红" >险资大手笔入局，首批中证A50ETF迎开门红</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">3月12日，首批中证A50ETF正式亮相。摩根中证A50ETF、平安中证A50ETF，分别在上交所、深交所上市交易。 开盘后两只ETF表现活跃，截至午间收盘，摩根中证A50ETF、平安中证A50...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 13, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>510</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/07/%E5%90%B4%E6%B8%85%E4%BA%AE%E7%9B%B8/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/07/%E5%90%B4%E6%B8%85%E4%BA%AE%E7%9B%B8/" title="吴清亮相！五千余字发言金句频出，四大券商火线解读，A股有望延续反弹" >吴清亮相！五千余字发言金句频出，四大券商火线解读，A股有望延续反弹</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">3月6日，十四届全国人大二次会议于下午3时举行记者会。刚上任的证监会主席吴清在记者会上，五千余字发言金句频出，引发了资本市场各方高度关注。
+吴清非常谦虚，他表示，到证监会主席岗位没有满月，还差一...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 07, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>4526</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/05/%E8%BF%913500%E4%BA%BF%E5%85%83%E5%AE%BD%E5%9F%BAETF%E6%8C%81%E7%BB%AD%E5%90%B8%E9%87%914%E5%8F%AA%E6%B2%AA%E6%B7%B1300ETF%E8%B7%BB%E8%BA%AB%E5%8D%83%E4%BA%BF%E4%BF%B1%E4%B9%90%E9%83%A8/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/05/%E8%BF%913500%E4%BA%BF%E5%85%83%E5%AE%BD%E5%9F%BAETF%E6%8C%81%E7%BB%AD%E5%90%B8%E9%87%914%E5%8F%AA%E6%B2%AA%E6%B7%B1300ETF%E8%B7%BB%E8%BA%AB%E5%8D%83%E4%BA%BF%E4%BF%B1%E4%B9%90%E9%83%A8/" title="近3500亿元！宽基ETF持续吸金，4只沪深300ETF跻身千亿俱乐部" >近3500亿元！宽基ETF持续吸金，4只沪深300ETF跻身千亿俱乐部</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">2024年前两个月，宽基股票ETF资金净流入近3500亿元。
+2024年以来，资金持续借道指数基金入市，指数化投资动能强劲。宽基指数产品表征市场整体行情，已成为各类投资者配置A股的有力工具，以沪...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 05, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1029</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/05/%E5%9B%BD%E5%AE%B6%E5%A4%A7%E5%9F%BA%E9%87%91%E5%87%BA%E6%89%8B%E4%B9%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E8%82%A1/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/05/%E5%9B%BD%E5%AE%B6%E5%A4%A7%E5%9F%BA%E9%87%91%E5%87%BA%E6%89%8B%E4%B9%B0%E4%BA%86%E8%BF%99%E4%BA%9B%E8%82%A1/" title="国家大基金出手买了这些股！AI “超级牛股”将在这个细分领域产生?" >国家大基金出手买了这些股！AI “超级牛股”将在这个细分领域产生?</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">近期，市场围绕AI（人工智能）的关注热度还在延续，且投资的细分主线仍在进一步扩散，如AI芯片、算力、服务器、光模块等。与此同时，重点投资芯片产业链的“国家队”国家大基金也频繁现身，且所布局标的多...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 05, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>3567</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/03/04/%E5%88%9B%E5%8E%86%E5%8F%B2%E6%96%B0%E9%AB%98/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/03/04/%E5%88%9B%E5%8E%86%E5%8F%B2%E6%96%B0%E9%AB%98/" title="创历史新高，A股万亿油气巨头涨近7%！沙特、俄罗斯、阿联酋等官宣大消息" >创历史新高，A股万亿油气巨头涨近7%！沙特、俄罗斯、阿联酋等官宣大消息</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">3月4日上午，石油板块震荡走强，中国海油涨近7%，股价再创历史新高，中国石油、中曼石油、广汇能源等跟涨。
+
+在经济增长预期较弱、资本市场“资产荒”现象加剧的背景下，中国海油作为A股稀缺的高成长性...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>三月 04, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1930</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+    
+
+<div class="col-lg-4 col-md-6 col-sm-12 post-item">
+  <div class="post-wrap">
+    
+    <a href="/2024/02/27/%E7%81%B5%E5%9D%87%E6%8A%95%E8%B5%84%E8%A2%AB%E7%BD%9A%E8%83%8C%E5%90%8E%E9%87%8F%E5%8C%96%E4%BA%A7%E5%93%81%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B%E5%A4%A7%E6%92%A4%E9%80%80%E7%A7%81%E5%8B%9F%E8%B8%A9%E8%B8%8F%E6%80%A7%E8%BD%AC%E6%8D%A2%E8%82%A1%E7%A5%A8/" class="post-image">
+      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+    </a>
+    <div class="post-content">
+      <div class="post-content-wrap">
+        <h3 class="post-title"><a href="/2024/02/27/%E7%81%B5%E5%9D%87%E6%8A%95%E8%B5%84%E8%A2%AB%E7%BD%9A%E8%83%8C%E5%90%8E%E9%87%8F%E5%8C%96%E4%BA%A7%E5%93%81%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B%E5%A4%A7%E6%92%A4%E9%80%80%E7%A7%81%E5%8B%9F%E8%B8%A9%E8%B8%8F%E6%80%A7%E8%BD%AC%E6%8D%A2%E8%82%A1%E7%A5%A8/" title="灵均投资被罚背后：量化产品史无前例大撤退，私募踩踏性转换股票" >灵均投资被罚背后：量化产品史无前例大撤退，私募踩踏性转换股票</a></h3>
+        <div class="post-excerpt">
+          <p class="substr-3">每经记者：李娜 王海慜 杨建 每经编辑：易启江
+在市场日前遭遇一系列风暴后，量化私募成了这轮风暴中最后倒下的一块多米诺骨牌。
+2024年开年以来，大量量化产品的净值经历了一轮断崖式下滑，量化私募...</p>
+        </div>
+      </div>
+      <div class="post-info">
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i>二月 27, 2024</span>
+        
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i>6102</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+</section>
+    <section class="paginator">
+  
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+  
+</section>
+  </div>
+</main>
   
 
-
-
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
 
   
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
+  
 </body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
