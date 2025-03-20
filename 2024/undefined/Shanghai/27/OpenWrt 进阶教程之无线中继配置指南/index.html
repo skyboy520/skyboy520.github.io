@@ -1,0 +1,785 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Skyboy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="无线网络传输距离是有限的，一个无线信号无法覆盖到较远的地方，或者远处的信号太弱，你希望能把信号增强并延伸过去。添加一台无线路由器，放在信号中间强度位置，通过无线信号连接上一个路由，那么这就称之为无线中继。 无线相关基础概念入门 无线路由器&#x2F;无线网关: 指的是能发射无线信号的路由器设备，且此设备属于“网关”身份，局域网的所有发往外部网络的数据都要经过此设备处理。  无线 AP: 指的是能发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenWrt 进阶教程之无线中继配置指南">
+<meta property="og:url" content="https://skygirl.us.kg/2024/undefined/Shanghai/27/OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="我的天空">
+<meta property="og:description" content="无线网络传输距离是有限的，一个无线信号无法覆盖到较远的地方，或者远处的信号太弱，你希望能把信号增强并延伸过去。添加一台无线路由器，放在信号中间强度位置，通过无线信号连接上一个路由，那么这就称之为无线中继。 无线相关基础概念入门 无线路由器&#x2F;无线网关: 指的是能发射无线信号的路由器设备，且此设备属于“网关”身份，局域网的所有发往外部网络的数据都要经过此设备处理。  无线 AP: 指的是能发">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795301789244c4393.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795301442fc25c878.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795301123f77c7963.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/009999983477953008143f602ad8.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/009999983477953005134c8bbbd3.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795300254399e969b.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529995204e158a0.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795299728ca4f38fc.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529947290ac16ff.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795299225e750fd6b.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795298954d312654a.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/009999983477952986798c88fdbe.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529841642231d67.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/009999983477952981191958cc53.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795297854b85feceb.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529756592e269e1.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795297262c67fb28e.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795296981d056349a.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529662896092962.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795296338f565d390.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529604196db6cda.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529947290ac16ff.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795299225e750fd6b.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529495972c7e605.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795294696f88f17e9.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795294455587111c6.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529416138378fb4.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795293880bdeee926.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/00999998347795293608a6de46bf.png">
+<meta property="og:image" content="https://s.redoc.top/img/article/0099999834779529334195a24e05.png">
+<meta property="article:published_time" content="2024-03-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-08-11T16:40:39.081Z">
+<meta property="article:author" content="Skyboy">
+<meta property="article:tag" content="OpenWrt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s.redoc.top/img/article/00999998347795301789244c4393.png">
+  
+  
+  
+  <title>OpenWrt 进阶教程之无线中继配置指南 - 我的天空</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"skygirl.us.kg","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>我的天空</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="OpenWrt 进阶教程之无线中继配置指南"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-28 00:00" pubdate>
+          2024年3月28日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          37 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">OpenWrt 进阶教程之无线中继配置指南</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年8月12日 凌晨
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>无线网络传输距离是有限的，一个无线信号无法覆盖到较远的地方，或者远处的信号太弱，你希望能把信号增强并延伸过去。添加一台无线路由器，放在信号中间强度位置，通过无线信号连接上一个路由，那么这就称之为无线中继。</p>
+<h2 id="无线相关基础概念入门"><a href="#无线相关基础概念入门" class="headerlink" title="无线相关基础概念入门"></a>无线相关基础概念入门</h2><ul>
+<li><p><strong>无线路由器&#x2F;无线网关</strong>: 指的是能发射无线信号的路由器设备，且此设备属于“网关”身份，局域网的所有发往外部网络的数据都要经过此设备处理。</p>
+</li>
+<li><p><strong>无线 AP</strong>: 指的是能发射无线信号的网络接入点设备，此设备相当于一台能发射无线信号的“交换机”，它只负责将无线数据传输到网关（路由器）。</p>
+</li>
+<li><p><strong>无线 AC</strong>: 指的是一种专门用于管控无线 AP 的网络设备，常见于各类企业级无线场景，因为企业环境下，往往会部署多个无线 AP，如果一个一个去配置会费时费力，所以各大品牌路由推出了配套的无线 AC 加 AP 产品，只需登录无线AC控制界面，即可管控所有的无线AP，以方便无线部署与管理。</p>
+<p>注意：AC 加 AP 方案属于配套软件的专有效果，只能使用同品牌指定的 AC 加 AP 产品，不能与其他品牌或产品混用。</p>
+</li>
+<li><p><strong>接入点</strong>: 通常情况下指的是无线信号的名称（无线 AP），就是你用手机连无线网时看到的名称，专业术语称其为“接入点”。</p>
+</li>
+<li><p><strong>无线速率</strong>: 指的是无线客户端连接到无线接入点时的最大网络速率，此速率不等于实际最大网速，受无线信号干扰、软件问题、网络限速等多种因素影响，最理想的实际无线网速大约为显示的无线速率的一半。</p>
+</li>
+</ul>
+<h2 id="OpenWrt-之万能无线中继"><a href="#OpenWrt-之万能无线中继" class="headerlink" title="OpenWrt 之万能无线中继"></a>OpenWrt 之万能无线中继</h2><p>OpenWrt 可以实现一种称之为“万能无线中继”的功能，其实是把路由器其中一个无线网卡当作上网客户端，连接上游无线网络，然后用另一个无线网卡作为无线接入点，因此不限制上游路由器的品牌或型号，具备最大程度的兼容性。</p>
+<p>打开“网络”-“无线”按需配置即可，示例操作以连接上游 2.4G 无线网络 “WIFI_2” 为例。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795301789244c4393.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/00999998347795301442fc25c878.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/00999998347795301123f77c7963.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/009999983477953008143f602ad8.png" srcset="/img/loading.gif" lazyload></p>
+<p>可选：检查“无线安全”选项卡中的加密方式和密码是否正确。</p>
+<p><img src="https://s.redoc.top/img/article/009999983477953005134c8bbbd3.png" srcset="/img/loading.gif" lazyload></p>
+<p>这种无线中继方式能非常方便的拓展无线上网覆盖范围，缺点就是无法形成一个统一的局域网。</p>
+<p>注意：此模式下，路由器 LAN 口地址不可与上级路由器使用相同的网段，否则将导致无法上网。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795300254399e969b.png" srcset="/img/loading.gif" lazyload alt="OpenWrt万能无线中继-网络拓扑示意图"></p>
+<h3 id="单网卡双模式无线中继"><a href="#单网卡双模式无线中继" class="headerlink" title="单网卡双模式无线中继"></a>单网卡双模式无线中继</h3><p>上面介绍的方式是一张网卡当作无线客户端，另一张网卡当作无线接入点，此方式的特点是互不干扰，稳定性强。</p>
+<p>根据需要也可启用单网卡双模式，即同一张网卡既当客户端又当接入点，此方式下可充分利用无线带宽。<br>注意：单网卡双模式下完全依赖于上游路由器的信号，一旦无法连接上游无线信号，则路由器将不会发射接入点信号。</p>
+<h3 id="无线桥接模式"><a href="#无线桥接模式" class="headerlink" title="无线桥接模式"></a>无线桥接模式</h3><p>即手动配置“接口”参数，将连接上游无线网络的接口加入到 “lan” 接口中，并关闭本机的 DHCP 服务，以实现和上游网络同网段的效果，适用于高级用户。</p>
+<h2 id="OpenWrt-无线中继-WDS"><a href="#OpenWrt-无线中继-WDS" class="headerlink" title="OpenWrt 无线中继 WDS"></a>OpenWrt 无线中继 WDS</h2><p>与万能中继不同之处在于，需要上下游路由器都具备 WDS 功能才能使用，WDS 无线中继最大的特点是，上下游路由器都在同一个局域网中，非常方便日常使用。</p>
+<p>WDS 中继环境，通过 WAN 口网线上网的路由器我们称其为“主路由”，其它通过无线信号进行中继的路由器，我们称其为“从路由”。</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先配置“主路由”，按需修改无线接入点的配置参数。</p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529995204e158a0.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/00999998347795299728ca4f38fc.png" srcset="/img/loading.gif" lazyload></p>
+<p>主路由配置完毕。</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>然后开始配置“从路由”，修改“从路由”的 LAN 口地址，为其固定一个同网段的局域网 IP，不可与局域网内其它设备冲突。</p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529947290ac16ff.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>关闭从路由的 DHCP 服务器，以免造成 DHCP 冲突。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795299225e750fd6b.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>禁用 LAN 接口的 IPv6 服务，以避免局域网设备获得多个临时 IPv6 地址，详情参见 <a target="_blank" rel="noopener" href="https://iyzm.net/openwrt/478.html">https://iyzm.net/openwrt/478.html</a></p>
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>加入上游路由器的 WDS 无线网络。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795298954d312654a.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/009999983477952986798c88fdbe.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529841642231d67.png" srcset="/img/loading.gif" lazyload></p>
+<p>可选：检查“无线安全”选项卡中的加密方式和密码是否正确。</p>
+<p>至此，从路由的 WDS 相关配置已完毕，只要处于上游无线信号范围内，从路由就能连接到上游路由。</p>
+<p><img src="https://s.redoc.top/img/article/009999983477952981191958cc53.png" srcset="/img/loading.gif" lazyload></p>
+<p>一点收尾工作，删除界面创建的无效接口。这是因为使用了无线扫描功能来添加WDS客户端参数导致的，直接把无线接入点改为WDS客户端就不会有这个问题了。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795297854b85feceb.png" srcset="/img/loading.gif" lazyload></p>
+<p>OpenWrt 无线中继 WDS-网络拓扑示意图</p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529756592e269e1.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="单网卡双模式无线中继-1"><a href="#单网卡双模式无线中继-1" class="headerlink" title="单网卡双模式无线中继"></a>单网卡双模式无线中继</h3><p>上面介绍的方式是一张网卡当作无线客户端，另一张网卡当作无线接入点，此方式的特点是互不干扰，稳定性强。</p>
+<p>根据需要也可启用单网卡双模式，即同一张网卡既当客户端又当接入点，此方式下可充分利用无线带宽。<br>注意：单网卡双模式下完全依赖于上游路由器的信号，一旦无法连接上游无线信号，则路由器将不会发射接入点信号。</p>
+<h2 id="OpenWrt-无线中继之-Mesh-网络"><a href="#OpenWrt-无线中继之-Mesh-网络" class="headerlink" title="OpenWrt 无线中继之 Mesh 网络"></a>OpenWrt 无线中继之 Mesh 网络</h2><p>与 WDS 无线中继相似，所有设备均处于同一个局域网，但不同之处在于 Mesh 网络属于网状网络，多跳互联，即并不固定连接某个上游设备，而是可以多个设备互相连接，这种特性使得无线拓展和维护更方便。</p>
+<p>因 Mesh 网络的组网特性，不区分主从路由，所有参与组网的设备称其为 “Mesh 节点”，只需在相关无线网卡添加对应的 Mesh 网络参数，任意一个 Mesh 节点能联网即可。</p>
+<p>提示：Mesh 网络参数与无线网卡的接入点参数不存在依赖关系，即同一张无线网卡可以同时使用接入点和 Mesh 网络，即使 Mesh 网络信号丢失，也不会影响无线网卡的接入点信号。</p>
+<p>按需在无线网卡添加 Mesh 网络参数，网卡的接入点则可以全部设为同名称同密码，方便无线漫游，或者也可以单独设置。</p>
+<p>注意：Mesh 网络的加密方式只有两个选择，无加密或者 WPA3-SAE</p>
+<p>第一步：为路由器 LAN 口配置一个 同网段的 IP 地址，不可与局域网其它设备冲突。<br>第二步：关闭 DHCP 服务器。（局域网内只能保留一个 DHCP 服务器。）<br>第三步：禁用 LAN 接口的 IPv6 服务，以避免局域网设备获得多个临时 IPv6 地址，详情参见 <a target="_blank" rel="noopener" href="https://iyzm.net/openwrt/478.html">https://iyzm.net/openwrt/478.html</a><br>第四步：添加 Mesh 节点无线参数，按需修改无线接入点参数，然后就可以使用了。</p>
+<p>把配置完毕的 Mesh 路由器，放置于其它配套的 Mesh 路由器信号范围内即可自动连接上。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795297262c67fb28e.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/00999998347795296981d056349a.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529662896092962.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/00999998347795296338f565d390.png" srcset="/img/loading.gif" lazyload></p>
+<p>有些无线网卡不支持Mesh，和无线网卡的驱动程序有关。</p>
+<p>注意：Mesh 网络本质上属于 802.11s 协议，一般只有路由器系统才支持，手机、电脑等是不支持该协议的，即手机、电脑等并不能直接连接到 Mesh 网络，想使用 Mesh 网络来进行无线漫游是极其错误的认知。</p>
+<p><strong>Mesh 协议本质上是为了方便进行无线组网，在无法连接网线的情况下，才应启用 Mesh 网络。</strong></p>
+<p>无缝漫游需要的是上网客户端支持 802.11r 之类的协议，然后各个 无线AP 也启用 802.11r 之类的协议才能实现无缝漫游。</p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529604196db6cda.png" srcset="/img/loading.gif" lazyload alt="OpenWrt 无线中继 Mesh 组网-网络拓扑示意图"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>无线中继的意义本质上是为了免布线扩展无线覆盖范围，但受限于其物理属性，不管使用何种无线中继方式，都有一个共同的缺点：无线带宽不可避免的减少，因为无线网卡要同时与上游路由和上网设备通信，就像一根水管被一分为二使用，所以无线带宽至少会减半。</p>
+<p>少数高端品牌专门定制了无线组网专用版路由，无线中继带宽不会减少，本质上是因为其配备了两个5G无线网卡，被设置为其中一个5G网卡专门连接上游路由，另一个5G网卡作为无线接入点连接上网设备，所以能做到不减无线带宽。</p>
+<h2 id="有线方式无线-AP"><a href="#有线方式无线-AP" class="headerlink" title="有线方式无线 AP"></a>有线方式无线 AP</h2><p>如果你非常注重无线速度和网络稳定性，那么最佳的无线扩展方式仍然是传统的有线连接，为无线路由配置一个 LAN 口 IP，关掉无线路由的 DHCP 服务器，再用网线连接 LAN 口到上级路由的 LAN 口即可，如此进行不断串联，即可扩展无线覆盖范围，无线接入点的网络名称和密码可以全部设为相同，以便进行无线漫游，无线信道则可以互相错开，以减少无线干扰。</p>
+<p>此方式适用于任何无线路由器，与路由系统、品牌、型号都无关。</p>
+<h3 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h3><p>先为作为 AP 的路由器配置一个同网段局域网 IP ，不可与其它设备冲突。</p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529947290ac16ff.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h3><p>关闭作为 AP 使用的路由器的 DHCP 服务器。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795299225e750fd6b.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="第三步-1"><a href="#第三步-1" class="headerlink" title="第三步"></a>第三步</h3><p>禁用 LAN 接口的 IPv6 服务，以避免局域网设备获得多个临时 IPv6 地址，详情参见 <a target="_blank" rel="noopener" href="https://iyzm.net/openwrt/478.html">https://iyzm.net/openwrt/478.html</a></p>
+<h3 id="第四步-1"><a href="#第四步-1" class="headerlink" title="第四步"></a>第四步</h3><p>用网线连接 AP 路由器的 LAN 口到上级路由器的 LAN 口，然后就可以开始使用了。</p>
+<p>OpenWrt 有线方式无线拓展-网络拓扑示意图</p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529495972c7e605.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="提高无线漫游效果（无缝漫游）"><a href="#提高无线漫游效果（无缝漫游）" class="headerlink" title="提高无线漫游效果（无缝漫游）"></a>提高无线漫游效果（无缝漫游）</h2><p>可以按需启用一些辅助无线漫游的特性，以提升无线网络使用体验，在“无线安全”选项卡，根据需要可启用“802.11k”、“802.11v”、“802.11r”等无线特性，使用得当的情况下，客户端可以进行无缝漫游，即漫游时网络连接不会被中断。</p>
+<p>注意：这些特性同时需要上网客户端支持才能生效，用于实现无线漫游的 AP 需要设置为相同的无线名称和密码。</p>
+<h3 id="启用-802-11v"><a href="#启用-802-11v" class="headerlink" title="启用 802.11v"></a>启用 802.11v</h3><p>此选项在 “接口配置”-“高级设置”选项卡。</p>
+<p>802.11v 协议允许终端设备交换网络拓扑的信息，包括射频环境，接入点的负载信息，通知客户端切换至更合适的 AP，使得网络负载均衡变得更有效。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795294696f88f17e9.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="启用-802-11k"><a href="#启用-802-11k" class="headerlink" title="启用 802.11k"></a>启用 802.11k</h3><p>此选项在 “接口配置”-“高级设置”选项卡。</p>
+<p>无线设备默认情况下总是倾向于连接信号最好的那个AP，而在实际应用中，这种逻辑可能会造成某个AP被过度使用，而信号稍弱的AP则没有什么设备连接，从而导致网络的整体利用效率下降。启用了 802.11k 协议后，如果信号最好的AP负载过高，则无线设备会连接到信号稍弱的那个AP。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795294455587111c6.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="启用-802-11r"><a href="#启用-802-11r" class="headerlink" title="启用 802.11r"></a>启用 802.11r</h3><p>此选项在 “接口配置”-“无线安全”选项卡。</p>
+<p>802.11r 协议着重于减少漫游时无线认证所需的时间，改善了客户端设备在接入点之间运动时的切换过程，协议允许一个无线客户端在实现切换之前，就建立起与新接入点之间安全且具备 QoS 的状态，这会将连接损失和网络中断减到最小，从而实现无感漫游，以使网络连接不会出现中断现象。</p>
+<p>注意：“移动域标识符”用于将多个 AP 进行分组，同一组的 AP 应使用相同的“移动域标识符”。</p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529416138378fb4.png" srcset="/img/loading.gif" lazyload></p>
+<p>获取 4 位数的十六进制数值可使用 Hex(16进制)随机生成计算器：<a target="_blank" rel="noopener" href="https://www.jisuan.mobi/p1H31N31z611NyWX.html">https://www.jisuan.mobi/p1H31N31z611NyWX.html</a></p>
+<p><img src="https://s.redoc.top/img/article/00999998347795293880bdeee926.png" srcset="/img/loading.gif" lazyload></p>
+<p>注意：为确保良好的无线漫游效果，还应当使用相同型号的无线路由器作为 AP 。</p>
+<h2 id="无线-AP-自身上网"><a href="#无线-AP-自身上网" class="headerlink" title="无线 AP 自身上网"></a>无线 AP 自身上网</h2><p>当无线路由器关闭 DHCP 被作为 AP 接入局域网后，默认情况下 AP 自身是无法上网的，但有时想让 AP 自身上网，以实现某些网络功能，比如在某个 AP 上挂载了移动硬盘，想让 AP 下载数据到硬盘中。</p>
+<p>只需修改 LAN 口参数，补齐网关地址和 DNS 地址即可，有时可能需要重启一次系统，然后这个 AP 就可以正常上网了。</p>
+<p><img src="https://s.redoc.top/img/article/00999998347795293608a6de46bf.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://s.redoc.top/img/article/0099999834779529334195a24e05.png" srcset="/img/loading.gif" lazyload></p>
+<p>[</p>
+<p><a target="_blank" rel="noopener" href="https://www.redoc.top/article/857-OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97">原文地址</a>：<a target="_blank" rel="noopener" href="https://www.redoc.top/article/857-OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97">https://www.redoc.top/article/857-OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/OpenWrt/" class="print-no-link">#OpenWrt</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>OpenWrt 进阶教程之无线中继配置指南</div>
+      <div>https://skygirl.us.kg/2024/undefined/Shanghai/27/OpenWrt 进阶教程之无线中继配置指南/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Skyboy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月28日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/undefined/Shanghai/01/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%20OpenWrt%20%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" title="进阶教程之 OpenWrt 常用网络配置指南">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">进阶教程之 OpenWrt 常用网络配置指南</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/undefined/Shanghai/12/%E7%94%9F%E9%95%BF%E4%B8%BA%E5%8F%82%E5%A4%A9%E5%A4%A7%E6%A0%91%E7%9A%84%E6%B2%AA%E6%B7%B1300ETF%E5%98%89%E5%AE%9E%E4%B8%AD%E8%AF%81%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E6%B2%AA%E6%B7%B1300etf/" title="时代记录者：生长为“参天大树”的沪深300ETF嘉实中证公募基金沪深300ETF">
+                        <span class="hidden-mobile">时代记录者：生长为“参天大树”的沪深300ETF嘉实中证公募基金沪深300ETF</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <i class="iconfont icon-love"></i> <a href="https://skygirl.us.kg" target="_blank" rel="nofollow noopener"><span>我的天空</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

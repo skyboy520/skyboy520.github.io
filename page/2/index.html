@@ -1,0 +1,901 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Skyboy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="我的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的天空">
+<meta property="og:url" content="https://skygirl.us.kg/page/2/index.html">
+<meta property="og:site_name" content="我的天空">
+<meta property="og:description" content="我的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Skyboy">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>我的天空</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"skygirl.us.kg","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>我的天空</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="欢迎光临我的个人博客"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/05/%E5%85%88%E8%B7%8C1.4%E4%B8%87%E4%BA%BF%E5%86%8D%E6%B6%A82.3%E4%B8%87%E4%BA%BF%E5%B8%82%E5%9C%BA%E7%96%AF%E4%BA%86/" target="_self">
+          先跌1.4万亿，再涨2.3万亿，市场疯了
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/05/%E5%85%88%E8%B7%8C1.4%E4%B8%87%E4%BA%BF%E5%86%8D%E6%B6%A82.3%E4%B8%87%E4%BA%BF%E5%B8%82%E5%9C%BA%E7%96%AF%E4%BA%86/" target="_self">
+        <div>
+          1 一场史无前例的科技泡沫正在突袭纳斯达克。 AI之王英伟达刚刚经历了一周的股价过山车。 美国时间7月30日，英伟达大跌英伟达大跌7.04%，市值一夜蒸发1934亿美元，折合成人民币超1.4万亿。 紧接着逆势大涨12.81%，刷新过去五个月的单日纪录，市值回升3290亿美元，约合人民币2.359万亿。 然而好戏还在后头，8月1日和2日英伟达连续两天分别下跌6.67%和1.78%，目前总市值为26
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-06 06:26" pubdate>
+              2024-08-06
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/18/%E5%A8%83%E5%93%88%E5%93%88%E7%AA%81%E5%8F%91%EF%BC%81%E5%AE%97%E9%A6%A5%E8%8E%89%E8%A6%81%E5%87%BA%E5%B1%80%EF%BC%9F%E5%AE%97%E5%BA%86%E5%90%8E%E8%83%9E%E5%BC%9F%E5%8F%91%E5%A3%B0%EF%BC%9A%E5%A5%BD%E4%BA%8B/" target="_self">
+          娃哈哈突发！宗馥莉要出局？宗庆后胞弟发声：好事
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/18/%E5%A8%83%E5%93%88%E5%93%88%E7%AA%81%E5%8F%91%EF%BC%81%E5%AE%97%E9%A6%A5%E8%8E%89%E8%A6%81%E5%87%BA%E5%B1%80%EF%BC%9F%E5%AE%97%E5%BA%86%E5%90%8E%E8%83%9E%E5%BC%9F%E5%8F%91%E5%A3%B0%EF%BC%9A%E5%A5%BD%E4%BA%8B/" target="_self">
+        <div>
+          侃见财经2024-07-19 10:13广东娃哈哈集团副董事长宗馥莉传出辞职消息，因股东质疑其经营管理。娃哈哈集团内部存在矛盾和分歧，宗馥莉希望改革团队受阻。宗庆后胞弟认为宗馥莉应先做好事而非大刀阔斧改变。宗馥莉需拿出更多诚意说服其他股东继续执掌娃哈哈。摘要由作者通过智能技术生成有用#深度好文计划#传承问题一直都是企业的头号难题。根据相关数据统计显示，全球大约只有30%的企业能传承到下一代。因而，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-07-19 00:00" pubdate>
+              2024-07-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BB%8F%E6%B5%8E/" class="category-chain-item">经济</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%A8%83%E5%93%88%E5%93%88/">#娃哈哈</a>
+            
+              <a href="/tags/%E5%AE%97%E9%A6%A5%E8%8E%89/">#宗馥莉</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/01/OpenWrt%E5%9B%BA%E4%BB%B6%E6%8E%A8%E8%8D%90%E4%BB%A5%E5%8F%8A%E5%82%BB%E7%93%9C%E5%BC%8F%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/" target="_self">
+          OpenWrt固件推荐以及傻瓜式在线编译
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/01/OpenWrt%E5%9B%BA%E4%BB%B6%E6%8E%A8%E8%8D%90%E4%BB%A5%E5%8F%8A%E5%82%BB%E7%93%9C%E5%BC%8F%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/" target="_self">
+        <div>
+          OpenWrt固件，肯定自己编译的好，但是我懒也不会啊。。。推荐几个自己常关注的，不定时更新。 -1：lean：https://github.com/coolsnowwolf/lede大雕就不介绍了，仓库有x64固件和最近折腾的rk3568固件（r5s、r68k、r68s、h68k等小机机） 0、iStoreOS：https://fw.koolcenter.com/iStoreOS/ 1、骷髅头：
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-02 00:00" pubdate>
+              2024-04-02
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/OpenWrt/">#OpenWrt</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/01/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%20OpenWrt%20%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
+          进阶教程之 OpenWrt 常用网络配置指南
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/01/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%20OpenWrt%20%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
+        <div>
+          当你学会了如何使用 OpenWrt 实现最基础的上网功能，那么是时候更进一步了，接下来学习使用 OpenWrt 实现常用的其它网络配置，比如强化无线网络安全等，以便更好的应对日常使用场景。 修改路由器 LAN 口地址（改变网段）打开“网络”-“接口”，进入 LAN 口配置界面，在“常规设置”选项卡，将“IPv4 地址” 改为需要的IP即可。 LAN 口地址是路由器自身作为一个上网设备所使用的 IP
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-02 00:00" pubdate>
+              2024-04-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/OpenWrt/">#OpenWrt</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/27/OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
+          OpenWrt 进阶教程之无线中继配置指南
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/27/OpenWrt%20%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B%E4%B9%8B%E6%97%A0%E7%BA%BF%E4%B8%AD%E7%BB%A7%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/" target="_self">
+        <div>
+          无线网络传输距离是有限的，一个无线信号无法覆盖到较远的地方，或者远处的信号太弱，你希望能把信号增强并延伸过去。添加一台无线路由器，放在信号中间强度位置，通过无线信号连接上一个路由，那么这就称之为无线中继。 无线相关基础概念入门 无线路由器&#x2F;无线网关: 指的是能发射无线信号的路由器设备，且此设备属于“网关”身份，局域网的所有发往外部网络的数据都要经过此设备处理。  无线 AP: 指的是能发
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-28 00:00" pubdate>
+              2024-03-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/OpenWrt/">#OpenWrt</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/12/%E7%94%9F%E9%95%BF%E4%B8%BA%E5%8F%82%E5%A4%A9%E5%A4%A7%E6%A0%91%E7%9A%84%E6%B2%AA%E6%B7%B1300ETF%E5%98%89%E5%AE%9E%E4%B8%AD%E8%AF%81%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E6%B2%AA%E6%B7%B1300etf/" target="_self">
+          时代记录者：生长为“参天大树”的沪深300ETF嘉实中证公募基金沪深300ETF
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/12/%E7%94%9F%E9%95%BF%E4%B8%BA%E5%8F%82%E5%A4%A9%E5%A4%A7%E6%A0%91%E7%9A%84%E6%B2%AA%E6%B7%B1300ETF%E5%98%89%E5%AE%9E%E4%B8%AD%E8%AF%81%E5%85%AC%E5%8B%9F%E5%9F%BA%E9%87%91%E6%B2%AA%E6%B7%B1300etf/" target="_self">
+        <div>
+          2005年4月8日，沪深300指数以984.67点开盘，一路震荡上扬后收于1003.45点。这也是A股核心资产代表沪深300指数的第一次正式亮相。 7年后，2012年5月7日，国内第二只跨市场指数产品——嘉实沪深300 ETF（159919）正式成立。此后12年时间里，嘉实沪深300ETF见证了国内经济由高速发展转向高质量发展的历程，也成长为A股市场上少有的“千亿级”宽基ETF，也是深交所第一只单
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-13 00:00" pubdate>
+              2024-03-13
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/A%E8%82%A1/">#A股</a>
+            
+              <a href="/tags/%E6%B2%AA%E6%B7%B1300/">#沪深300</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/12/%E9%99%A9%E8%B5%84%E5%A4%A7%E6%89%8B%E7%AC%94%E5%85%A5%E5%B1%80%E9%A6%96%E6%89%B9%E4%B8%AD%E8%AF%81A50ETF%E8%BF%8E%E5%BC%80%E9%97%A8%E7%BA%A2/" target="_self">
+          险资大手笔入局，首批中证A50ETF迎开门红
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/12/%E9%99%A9%E8%B5%84%E5%A4%A7%E6%89%8B%E7%AC%94%E5%85%A5%E5%B1%80%E9%A6%96%E6%89%B9%E4%B8%AD%E8%AF%81A50ETF%E8%BF%8E%E5%BC%80%E9%97%A8%E7%BA%A2/" target="_self">
+        <div>
+          3月12日，首批中证A50ETF正式亮相。摩根中证A50ETF、平安中证A50ETF，分别在上交所、深交所上市交易。 开盘后两只ETF表现活跃，截至午间收盘，摩根中证A50ETF、平安中证A50ETF成交额均超过7亿元。午后，资金继续流入，截至收盘，两只ETF成交额更是双双突破9亿元大关，且单日换手率均超过40%。 上交所表示，中证A50产品的推出将有助于引导资金更多地投向A股核心资产，发挥资产配
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-13 00:00" pubdate>
+              2024-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BB%8F%E6%B5%8E/" class="category-chain-item">经济</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/A50/">#A50</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/06/Git%20-%20%E9%85%8D%E7%BD%AE%E5%85%AC%E9%92%A5%E7%A7%81%E9%92%A5/" target="_self">
+          Git - 配置公钥私钥
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/06/Git%20-%20%E9%85%8D%E7%BD%AE%E5%85%AC%E9%92%A5%E7%A7%81%E9%92%A5/" target="_self">
+        <div>
+          before 方案一，明文添加用户名和密码(不推荐) 方案2：基于凭证助手的方式 方案三，基于公钥私钥的形式 返回目录  before默认的，本地每次推送代码到远程仓库，都要输入用户名和密码，想要一劳永逸的解决这个问题，可以有以下几种方式：  方案1. 在remote add时，在远程仓库的url中手动添加用户名和密码。不推荐这种方式，因为在本地暴露了你的用户名和密码信息。 方案2. 基于凭证助
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-07 00:00" pubdate>
+              2024-03-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Git/">#Git</a>
+            
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/">#软件</a>
+            
+              <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/06/%E5%90%B4%E6%B8%85%E4%BA%AE%E7%9B%B8/" target="_self">
+          吴清亮相！五千余字发言金句频出，四大券商火线解读，A股有望延续反弹
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/06/%E5%90%B4%E6%B8%85%E4%BA%AE%E7%9B%B8/" target="_self">
+        <div>
+          3月6日，十四届全国人大二次会议于下午3时举行记者会。刚上任的证监会主席吴清在记者会上，五千余字发言金句频出，引发了资本市场各方高度关注。 吴清非常谦虚，他表示，到证监会主席岗位没有满月，还差一天，边学边干，以学为主，一方面是进一步学习领会党中央国务院关于资本市场工作的决策部署；一方面是通过调研向市场学习。 根据《每日经济新闻》梳理，吴清的讲话涉及投融资平衡、退市制度、提高上市公司质量等与投资者利
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-07 00:00" pubdate>
+              2024-03-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BB%8F%E6%B5%8E/" class="category-chain-item">经济</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/A%E8%82%A1/">#A股</a>
+            
+              <a href="/tags/%E8%AF%81%E7%9B%91%E4%BC%9A/">#证监会</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/undefined/Shanghai/26/%E7%81%B5%E5%9D%87%E6%8A%95%E8%B5%84%E8%A2%AB%E7%BD%9A%E8%83%8C%E5%90%8E%E9%87%8F%E5%8C%96%E4%BA%A7%E5%93%81%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B%E5%A4%A7%E6%92%A4%E9%80%80%E7%A7%81%E5%8B%9F%E8%B8%A9%E8%B8%8F%E6%80%A7%E8%BD%AC%E6%8D%A2%E8%82%A1%E7%A5%A8/" target="_self">
+          灵均投资被罚背后：量化产品史无前例大撤退，私募踩踏性转换股票
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/undefined/Shanghai/26/%E7%81%B5%E5%9D%87%E6%8A%95%E8%B5%84%E8%A2%AB%E7%BD%9A%E8%83%8C%E5%90%8E%E9%87%8F%E5%8C%96%E4%BA%A7%E5%93%81%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B%E5%A4%A7%E6%92%A4%E9%80%80%E7%A7%81%E5%8B%9F%E8%B8%A9%E8%B8%8F%E6%80%A7%E8%BD%AC%E6%8D%A2%E8%82%A1%E7%A5%A8/" target="_self">
+        <div>
+          每经记者：李娜 王海慜 杨建 每经编辑：易启江 在市场日前遭遇一系列风暴后，量化私募成了这轮风暴中最后倒下的一块多米诺骨牌。 2024年开年以来，大量量化产品的净值经历了一轮断崖式下滑，量化私募集体上演超额大回撤，回撤幅度是五年来甚至十年来的极值。 在这个过程中，一个名为灵均投资的量化机构成为了众矢之的，因为它在2月19日开盘后短时间内大量卖出沪深股票，引发了A股的大幅跳水，被交易所给予限制交易和
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-27 00:32" pubdate>
+              2024-02-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BB%8F%E6%B5%8E/" class="category-chain-item">经济</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%87%8F%E5%8C%96/">#量化</a>
+            
+              <a href="/tags/%E7%A7%81%E5%8B%9F/">#私募</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <i class="iconfont icon-love"></i> <a href="https://skygirl.us.kg" target="_blank" rel="nofollow noopener"><span>我的天空</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
